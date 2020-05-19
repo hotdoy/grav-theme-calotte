@@ -1,0 +1,92 @@
+  html {
+	--color-bg: #f1f1f1;
+	--color-fg: #313131;
+	--color-hl: #009688;
+}
+
+
+/*BUTTONS*/
+
+a.btn-link:after {
+	background-image: url(../../calottecore/images/buttons/chevron_right-green.svg);
+}
+
+a.btn-down:after {
+	background-image: url(../../calottecore/images/buttons/arrow_down-green.svg);
+}
+
+a.btn-ext:after {
+	background-image: url(../../calottecore/images/buttons/open_in_new-green.svg);
+}
+
+a.btn-back:before {	
+	background-image: url(../../calottecore/images/buttons/chevron_left-green.svg);
+}
+
+a.btn-mail:before {
+	background-image: url(../../calottecore/images/buttons/mail-green.svg);
+}
+
+a.btn-tel:before {
+    background-image: url(../../calottecore/images/buttons/phone-green.svg);
+}
+
+a.btn-messenger:before {
+	background-image: url(../../calottecore/images/buttons/messenger-green.svg);
+}
+
+
+a.btn-solid,
+.content a.btn-solid {
+    border-radius: 9999px;
+}
+
+
+
+
+
+
+
+
+
+
+/*FOOTER===========================================================================*/
+.footer__ctn {
+	justify-content: center;
+}
+
+.footer__nav {
+	width: 100%;
+}
+@media (min-width: 735px) {
+	.footer__nav {
+		width: 50%;
+	}
+}
+
+.footer__address {
+	margin-top: calc(var(--rhythm)/2);
+	width: 100%;
+	line-height: 1.6;
+	font-size: 1em;
+}
+
+@media (min-width: 735px) {
+	.footer__address {
+		margin-top: 0;
+		width: 25%;
+	}
+}
+
+.footer__newsletter {
+	margin-top: calc(var(--rhythm)/2);
+	width: 100%;
+}
+@media (min-width: 735px) {
+	.footer__newsletter {
+		margin-top: 0;
+		width: 25%;
+	}
+}
+
+

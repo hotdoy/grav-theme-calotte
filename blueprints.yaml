@@ -1,0 +1,18 @@
+name: Calotte
+slug: calotte
+type: plugin
+version: 0.1.0
+description: Calotte Agency theme.
+icon: rebel
+author:
+  name: Calotte
+  email: dev@calotte.ca
+homepage: https://github.com/calotte/grav-theme-calotte
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/calotte/grav-theme-calotte/issues
+readme: https://github.com/calotte/grav-theme-calotte/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }

@@ -1,0 +1,40 @@
+<footer>
+
+	<div class="footer__ctn">
+		
+		<div class="footer__nav">
+
+			<ul>
+		    {% for p in pages.children.visible %}
+		    	<li>
+		    		{% set active = p.active ? 'active' : '' %}
+		    		<a href="{{ p.url }}" class="{{ active }}">{{ p.menu }}</a>
+			    	{% if p.children.visible %}
+			    	<ul>
+			        	{% for p in p.children.visible %}
+			        	{% set active = p.active ? 'active' : '' %}
+			        	<li><a href="{{ p.url }}" class="{{ active }}">{{ p.menu }}</a></li>
+			        	{% endfor %}
+			    	</ul>
+			    	{% endif %}
+		    	</li>
+			{% endfor %}
+			</ul>
+
+		</div>
+
+		<div class="footer__address">{{ "THEME.ADDRESS"|t }}</div>
+
+		<div class="footer__newsletter">
+			{% include 'partials/mailchimp.html.twig' %}
+		</div>
+
+
+	</div>
+
+		<div class="footer__legal">
+			<div class="copyright">© {{ "THEME.LEGAL.COPYRIGHT"|t }} {{ "now"|date("Y") }}</div>
+			{% include 'partials/credit.html.twig' %}
+		</div>
+
+</footer>
