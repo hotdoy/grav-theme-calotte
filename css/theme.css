@@ -1,0 +1,149 @@
+/* FONTS =========================================================================== */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('../../calottecore/fonts/Roboto/roboto-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../calottecore/fonts/Roboto/roboto-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), local('Roboto-Italic'),
+       url('../../calottecore/fonts/Roboto/roboto-v20-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../calottecore/fonts/Roboto/roboto-v20-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+       url('../../calottecore/fonts/Roboto/roboto-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../calottecore/fonts/Roboto/roboto-v20-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'),
+       url('../../calottecore/fonts/Roboto/roboto-v20-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../calottecore/fonts/Roboto/roboto-v20-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lexend Deca Regular'), local('LexendDeca-Regular'),
+       url('../../calottecore/fonts/LexendDeca/lexend-deca-v1-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../calottecore/fonts/LexendDeca/lexend-deca-v1-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+
+
+
+/* VARIABLES ===================================================================== */
+
+html {
+  --width-tight: 600px;
+  --width-body: 1000px;
+  --width-site: 1600px;
+  --width-full: 1920px;
+  --gutter: 2rem;
+  --rhythm: 10rem;
+  --header-heigth: 5rem;
+  --color-bg: #f1f1f1;
+  --color-fg: #313131;
+  --color-hl: #009688;
+  --color-hl-inverted: #FFF;
+
+  --font-base: 'Roboto', sans-serif;
+  --font-alt: 'Lexend Deca', sans-serif;
+
+  font-size: 16px;
+  font-family: var(--font-base);
+}
+
+@media (max-width: 735px) {
+  html {
+    --rhythm: 8rem;
+  }
+}
+@media (max-width: 380px) {
+  html {
+    --rhythm: 6rem;
+  }
+}
+
+body {
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+}
+
+h1, h2, blockquote {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+
+
+
+
+/*UTILS===============================================================================*/
+
+.tight {
+  max-width: var(--width-tight);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.body {
+  max-width: var(--width-body);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.site {
+  max-width: var(--width-site);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.full {
+  max-width: var(--width-full);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.rhythm {
+  margin-top: var(--rhythm);
+}
+
+.landscape{display: block;}
+@media (max-width: 735px) {.landscape {display: none;}}
+.portrait {display: block;}
+@media (min-width: 735px) {.portrait {display: none;}}
+
+
+.module {
+  position: relative;
+  margin-top: var(--rhythm);
+  z-index: 1000;
+}
+
+/*FIX FIRST MODULE TOP MARGIN*/
+#header + .module {
+    margin-top: calc(var(--rhythm) - 2.5rem);
+}
+
+/*PAGE OPTIONALS*/
+.inverted_nav #header {
+    color: #fff;
+}

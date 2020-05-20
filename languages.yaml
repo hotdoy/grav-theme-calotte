@@ -1,0 +1,22 @@
+fr:
+    THEME:
+        ADDRESS:
+            TITLE: "Calotte"
+            STREETADDRESS: "7723 Ave. Henri Julien<br>Montréal, Québec<br>H2R 2B6"
+        MAILCHIMP:
+            TITLE: "Infolettre"
+            EMAIL: "Email"
+            SUBMIT: "S'inscrire"
+        ERROR:
+            TITLE: "404"
+            CONTENT: "Oh non! Nous n'avons pas trouvé la page que vous cherchez."
+en:
+    THEME:
+        ADDRESS: "<h2>Calotte</h2>7723 Ave. Henri Julien<br>Montreal, Quebec<br>H2R 2B6"
+        MAILCHIMP:
+            TITLE: "Newsletter"
+            EMAIL: "Email"
+            SUBMIT: "Subscribe"
+        ERROR:
+            TITLE: "404"
+            CONTENT: "Oh no! We couldn't find the page you were looking for."
