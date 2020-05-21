@@ -16,3 +16,33 @@ license: MIT
 
 dependencies:
   - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+
+    tracking:
+      type: section
+      title: Tracking
+
+    gtm_container_id:
+      type: text
+      label: GTM Container ID
+      help: Google Tag Manager Container ID
+      placeholder: 'GTM-ZXCVB00'
+
+    facebook_app_id:
+      type: text
+      label: Facebook App Id
+      placeholder: '123456789123456'
+      
+    twitter_site:
+      type: text
+      label: Twitter Site
+      placeholder: '@twitter_handle'
+
+    organization_logo:
+      type: text
+      label: Organization Logo
+      help: The absolute path to your organization logo. The image must be 112x112px at minimum. And of jpg, png, or gif format.
+      placeholder: 'https://path/to/logo.png'
