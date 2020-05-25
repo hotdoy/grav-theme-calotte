@@ -21,9 +21,9 @@ form:
   validation: loose
   fields:
 
-    tracking:
+    core:
       type: section
-      title: Tracking
+      title: Core
 
     gtm_container_id:
       type: text
@@ -35,11 +35,25 @@ form:
       type: text
       label: Facebook App Id
       placeholder: '123456789123456'
+
+    facebook_pixel:
+      type: textarea
+      rows: 13
+      label: Facebook Pixel
       
     twitter_site:
       type: text
       label: Twitter Site
       placeholder: '@twitter_handle'
+
+    gmaps_key:
+      type: text
+      label: Google Maps API Key
+
+    gmaps_styles:
+      type: textarea
+      rows: 13
+      label: Snazzy Maps
 
     organization_logo:
       type: text
