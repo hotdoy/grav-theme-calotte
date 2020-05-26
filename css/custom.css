@@ -59,13 +59,24 @@ a.btn-solid,
 
 /*SPLASH==========================================================================*/
 
-.splash .content h1 {
+.splash.smaller_h1 h1 {
  font-size: 1.5rem;
 }
 @media (min-width: 735px) {
-    .splash .content h1 {
+    .splash.smaller_h1 h1 {
      font-size: 2rem;
     }
+}
+
+
+
+
+
+/*CAROUSEL=============================================================================*/
+
+.carousel__item {
+	background-color: #e8e8e8;
+
 }
 
 

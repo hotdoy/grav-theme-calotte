@@ -9,3 +9,8 @@ body {
   color: var(--color-fg);
   background-color: var(--color-bg);
 }
+
+::selection {
+  background-color: var(--color-hl); 
+  color: var(--color-hl-inverted);
+}
