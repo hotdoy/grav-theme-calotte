@@ -60,6 +60,11 @@ a.btn-back:before {
 	background-image: url(../../calottecore/images/buttons/chevron_left-green.svg);
 }
 
+a.btn-round:hover,
+a.btn-square:hover {
+	background-color: #00ad9d;
+}
+
 
 
 
