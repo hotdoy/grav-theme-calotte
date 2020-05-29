@@ -1,3 +1,47 @@
+/*CONTACT GRID ==================================================================*/
+.module.grid.contact .grid__grid {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr); 
+	max-width: var(--width-body);
+	text-align: left;
+}
+
+@media (min-width: 735px) {
+	.module.grid.contact .grid__grid {
+		grid-template-columns: repeat(3, 1fr); 
+	}
+}
+
+@media (min-width: 1000px) {
+	.module.grid.contact .grid__grid {
+		grid-template-columns: repeat(3, 1fr); 
+	}
+}
+
+.module.grid.contact .grid__item {
+    background-color: #e8e8e8;
+	border-radius: 20px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.module.grid.contact .grid__item h2,
+.module.grid.contact .grid__item p:nth-child(1) {
+	flex-grow: 0;
+}
+
+.module.grid.contact .grid__item p:nth-child(2) {
+	flex-grow: 2;
+}
+
+.module.grid.contact .grid__item .btn-round {
+	width: 100%;
+}
+
+
+
 /*BUTTONS=========================================================================*/
 
 a.btn-link:after {
@@ -14,23 +58,6 @@ a.btn-ext:after {
 
 a.btn-back:before {	
 	background-image: url(../../calottecore/images/buttons/chevron_left-green.svg);
-}
-
-a.btn-mail:before {
-	background-image: url(../../calottecore/images/buttons/mail-green.svg);
-}
-
-a.btn-tel:before {
-    background-image: url(../../calottecore/images/buttons/phone-green.svg);
-}
-
-a.btn-messenger:before {
-	background-image: url(../../calottecore/images/buttons/messenger-green.svg);
-}
-
-a.btn-solid,
-.content a.btn-solid {
-    border-radius: 9999px;
 }
 
 
@@ -76,7 +103,12 @@ a.btn-solid,
 
 .carousel__item {
 	background-color: #e8e8e8;
+	border-radius: 20px;
+}
 
+.carousel__item img {
+	justify-content: flex-start;
+	width: 20%;
 }
 
 

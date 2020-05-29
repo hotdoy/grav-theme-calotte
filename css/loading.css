@@ -54,34 +54,3 @@ body.loaded #loading.intro {
 	opacity: 0;
 	visibility: hidden;
 }
-
-
-
-
-
-/*EXITING ======================================================================*/
-
-body.exiting .module.content,
-body.exiting .module.mediatext {
-	transition-delay: 0.1s;
-	transition-duration: 0.2s;
-	transform: translateY(10px);
-	opacity: 0;
-}
-
-body.exiting .splash .splash__content-ctn {
-	transition-delay: 0s;
-	transition-duration: 0.2s;
-	transform: translateY(10px);
-	opacity: 0;
-}
-body.exiting .splash .splash__ctn {
-	transition: all 0.2s;
-	opacity: 0;
-}
-
-body.exiting .module.map {
-	transition-delay: 0s;
-	transition-duration: 0.2s;
-	opacity: 0;
-}
