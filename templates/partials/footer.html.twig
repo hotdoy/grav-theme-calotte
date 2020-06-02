@@ -54,7 +54,7 @@
 	<div class="footer__bottom">
 		<div class="legal">
 			<span class="copyright">© {{ site.title }} {{ "now"|date("Y") }}</span>
-			<a class="terms" href="{{page.find('/termes-et-conditions').url}}">Terms et conditions</a>
+			<a class="terms" href="{{page.find('/termes-et-conditions').url}}">{{ "THEME.LEGAL.TERMS"|t }}</a>
 		</div>
 		{% include 'partials/credit.html.twig' %}
 	</div>

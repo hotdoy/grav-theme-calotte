@@ -7,9 +7,14 @@ fr:
             TITLE: "Infolettre"
             EMAIL: "Email"
             SUBMIT: "S'inscrire"
-        ERROR:
+        ERROR_404:
             TITLE: "404"
             CONTENT: "Oh non! Nous n'avons pas trouvé la page que vous cherchez."
+        LEGAL:
+            TERMS: "Termes et conditions"
+
+
+
 en:
     THEME:
         ADDRESS: "<h2>Calotte</h2>7723 Ave. Henri Julien<br>Montreal, Quebec<br>H2R 2B6"
@@ -17,6 +22,8 @@ en:
             TITLE: "Newsletter"
             EMAIL: "Email"
             SUBMIT: "Subscribe"
-        ERROR:
+        ERROR_404:
             TITLE: "404"
             CONTENT: "Oh no! We couldn't find the page you were looking for."
+        LEGAL:
+            TERMS: "Terms & Conditions"
