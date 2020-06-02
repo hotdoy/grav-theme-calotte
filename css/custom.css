@@ -1,5 +1,5 @@
-/*CONTACT GRID ==================================================================*/
-.module.grid.contact .grid__grid {
+/* GRID ==================================================================*/
+.module.grid .grid__grid {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr); 
 	max-width: var(--width-body);
@@ -7,18 +7,18 @@
 }
 
 @media (min-width: 735px) {
-	.module.grid.contact .grid__grid {
+	.module.grid .grid__grid {
 		grid-template-columns: repeat(3, 1fr); 
 	}
 }
 
 @media (min-width: 1000px) {
-	.module.grid.contact .grid__grid {
+	.module.grid .grid__grid {
 		grid-template-columns: repeat(3, 1fr); 
 	}
 }
 
-.module.grid.contact .grid__item {
+.module.grid .grid__item {
     background-color: #e8e8e8;
 	border-radius: 20px;
 
@@ -27,19 +27,19 @@
 	justify-content: space-between;
 }
 
-.module.grid.contact .grid__item h2,
-.module.grid.contact .grid__item p:nth-child(1) {
-	flex-grow: 0;
+.module.grid .grid__item h2,
+.module.grid .grid__item p:nth-child(1) {
+	flex-grow: 1;
 }
 
-.module.grid.contact .grid__item p:nth-child(2) {
-	flex-grow: 2;
-}
-
-.module.grid.contact .grid__item .btn-round {
+.module.grid .grid__item .btn-round, 
+.module.grid .grid__item .btn-square {
 	width: 100%;
 }
 
+.module.grid .grid__item img {
+	width: 20%;
+}
 
 
 /*BUTTONS=========================================================================*/
@@ -122,7 +122,7 @@ a.btn-square:hover {
 
 /*FOOTER===========================================================================*/
 
-.footer__ctn {
+.footer__top {
 	justify-content: center;
 }
 
@@ -194,4 +194,9 @@ a.btn-square:hover {
 
 #mc_embed_signup input[type=email], #mc_embed_signup input[type=text] {
      margin-top: 0; 
+}
+
+.footer__bottom .copyright,
+.footer__bottom .terms {
+	margin-right: 1rem;
 }

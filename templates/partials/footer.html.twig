@@ -1,6 +1,6 @@
 <footer>
 
-	<div class="footer__ctn">
+	<div class="footer__top">
 		
 		<div class="footer__nav">
 
@@ -51,9 +51,12 @@
 
 	</div>
 
-		<div class="footer__legal">
-			<div class="copyright">© {{ site.title }} {{ "now"|date("Y") }}</div>
-			{% include 'partials/credit.html.twig' %}
+	<div class="footer__bottom">
+		<div class="legal">
+			<span class="copyright">© {{ site.title }} {{ "now"|date("Y") }}</span>
+			<a class="terms" href="{{page.find('/termes-et-conditions').url}}">Terms et conditions</a>
 		</div>
+		{% include 'partials/credit.html.twig' %}
+	</div>
 
 </footer>
