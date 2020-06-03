@@ -25,6 +25,13 @@ form:
       type: section
       title: Core
 
+    ga_tracking_id:
+      type: text
+      label: GA Tracking ID
+      help: Google Analytics Tracking ID
+      placeholder: 'UA-123456789-1'
+      description: Do not fill if you are using GTM
+
     gtm_container_id:
       type: text
       label: GTM Container ID
@@ -60,3 +67,7 @@ form:
       label: Organization Logo
       help: The absolute path to your organization logo. The image must be 112x112px at minimum. And of jpg, png, or gif format.
       placeholder: 'https://path/to/logo.png'
+
+    calotte:
+      type: section
+      title: Calotte
