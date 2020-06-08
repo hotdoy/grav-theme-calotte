@@ -1,8 +1,1 @@
-streams:
- schemes:
-   theme:
-     type: ReadOnlyStream
-     prefixes:
-       '':
-         - user/themes/calotte
-         - user/themes/calottecore
+enabled: true

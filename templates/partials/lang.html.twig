@@ -1,0 +1,6 @@
+{% if grav.language.getLanguages|length > 1 %}
+{% for lg in grav.language.getLanguages if lg != grav.language.getActive %}
+    {% set url = base_url_simple ~ '/' ~ lg ~ page.rawRoute %}
+    <a href="{{ url }}">{{ lg }}</a>
+{% endfor %}
+{% endif %}

@@ -1,0 +1,109 @@
+div[data-announcement] {
+    display: none;
+}
+
+.loaded .announcement {
+    position: fixed;
+    bottom: 1rem; 
+    left: 1rem;
+    right: 1rem;
+    margin: 0 0 0 auto;
+    max-width: 411px;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: #FAFBFC;
+    color: #172B4D;
+    font-family: var(--font-alt);
+    font-size: 14px;
+    line-height: 1.4;
+    z-index: 4000;
+    border-radius: 8px;
+    animation-name: announcement;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.announcement strong{
+    font-weight: 700;
+}
+
+.announcement a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.announcement p {
+    margin-top: calc(0.5rem + 20px);
+    font-family: var(--font-alt);
+    font-size: 12px;
+}
+
+@media (min-width: 735px) {
+    .announcement p {
+        font-size: 14px;
+    }
+}
+
+.announcement::before {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.announcement.error{
+    background-color: #FF5630;
+    color: #fff;
+}
+.announcement.error::before{
+    background-image: url(../images/announcement/error-white.svg);
+}
+
+.announcement.warning{
+    background-color: #FFAB00;
+}
+.announcement.warning::before{
+    background-image: url(../images/announcement/warning-black.svg);
+    width: 22px;
+}
+
+.announcement.notice{
+    background-color: #6554C0;
+    color: #fff;
+}
+.announcement.notice::before{
+    background-image: url(../images/announcement/info-white.svg);
+}
+
+.announcement.success{
+    background-color: #36B37E;
+}
+.announcement.success::before{
+    background-image: url(../images/announcement/heart-black.svg);
+    width: 22px;
+}
+
+.announcement.gdpr{
+    background-color: #0747A6;
+    color: #fff;
+}
+.announcement.gdpr::before{
+    background-image: url(../images/announcement/cookie-white.svg);
+}
+
+.announcement__label {
+    display: inline-block;
+    padding: 10px 10px 0px 0px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@keyframes announcement {
+    0% {opacity:0; transform: translateY(110%);}
+    50% {opacity:0; transform: translateY(110%);}
+    75% {opacity:1; transform: translateY(-10%);}
+    100% {transform: translateY(0%);}
+}

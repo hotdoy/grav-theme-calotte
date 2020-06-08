@@ -1,0 +1,48 @@
+.content *:first-child {
+	margin-top: 0;
+}
+
+.content h1,.content h2,.content h3,.content h4,.content h5,.content h6,
+.content p, .content blockquote, .content pre, 
+.content ul,.content ol {
+	padding: 0 var(--gutter);
+	width: 100%;
+	max-width: var(--width-tight);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content hr {
+	margin: calc(var(--rhythm)/2) 0 calc(var(--rhythm)/2) 0;
+    border: none;
+}
+
+.content p img,
+.content p video {
+	margin: 0 auto 0 auto;
+}
+
+.content img,
+.content video {
+	display: block;
+	width: 100%;
+}
+
+.content pre {
+    max-width: var(--width-tight);
+}
+
+.content blockquote p {
+	padding: 0;
+}
+
+
+
+
+
+/*OPTIONALS*/
+
+.content.padded {
+	padding: var(--rhythm) 0 var(--rhythm) 0;
+	background-color: #f1f1f1;
+}

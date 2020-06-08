@@ -10,6 +10,4 @@ mklink /D D:\Dev\_PROJECTS\calotte\grav-admin\user D:\Dev\_PROJECTS\calotte\user
 
 themes
 
-mklink /D D:\Dev\_PROJECTS\calotte\user\themes\calottecore D:\Dev\_PROJECTS\calotte\grav-theme-calottecore
 mklink /D D:\Dev\_PROJECTS\calotte\user\themes\calotte D:\Dev\_PROJECTS\calotte\grav-theme-calotte
-mklink /D D:\Dev\_PROJECTS\calotte\user\themes\calottecore D:\Dev\_PROJECTS\grav-theme-calottecore

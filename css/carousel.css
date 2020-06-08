@@ -1,0 +1,69 @@
+.carousel {
+	overflow: hidden;
+}
+
+.carousel__content {
+	max-width: var(--width-tight);
+	margin: 0 auto 2rem auto;
+	padding: 0 var(--gutter);
+}
+
+.carousel__content *:first-child {
+	margin-top: 0;
+}
+
+.carousel__ctn {
+	margin-left: var(--gutter);
+	width: 100%;
+	max-width: var(--width-full);
+}
+@media (min-width: 1600px) {
+	.carousel__ctn {
+		margin-left: calc((((100% - 1600px) / 2) + var(--gutter)));
+	}
+}
+
+.carousel__item {
+	display: flex;
+	flex-direction: column;
+    justify-content: flex-start;
+
+	width: 280px;
+	height:400px;
+	margin-right: var(--gutter);
+	padding: 2rem;
+	background-color: #f1f1f1;
+}
+
+@media (min-width: 735px) {
+	.carousel__item {
+		width: 346px;
+	}
+}
+
+.carousel__item * {
+	max-width: 100%;
+}
+
+.carousel__item img,
+.carousel__item video{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	max-width: 100%;
+}
+
+
+.carousel__item *:first-child {
+	margin-top: 0;
+}
+
+.carousel__item h2, .carousel__item h3, .carousel__item h4, .carousel__item h5, .carousel__item h6,
+.carousel__item p {
+	padding: 0;
+	margin-left: 0;
+}
+
+.flickity-viewport {
+    overflow: visible !important;
+}

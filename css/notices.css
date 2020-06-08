@@ -1,0 +1,71 @@
+.notices {
+    width: 100%;
+    max-width: calc(var(--width-tight) - 4rem);
+    margin: 1rem auto;
+    padding: 1rem 0 1rem 0;
+    z-index: 2000;
+    line-height: 1.4;
+    border-left: none !important;
+}
+
+.notices::before {
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.content .notices p {
+    margin-top: 0;
+    font-size: 14px;
+    padding-left: 3rem;
+}
+
+.notices strong {
+    font-weight: 700;
+}
+
+.notices a,
+.content .notices a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+
+.notices.yellow {
+    background: #FFAB00;
+    color: #172B4D;
+}
+.notices.yellow::before{
+    background-image: url(../images/announcement/warning-black.svg);
+    width: 22px;
+}
+
+.notices.red {
+    background-color: #FF5630;
+    color: #fff;
+}
+.notices.red::before{
+    background-image: url(../images/announcement/error-white.svg);
+}
+
+
+.notices.blue {
+    background: #6554C0;
+    color: #ffffff;
+}
+.notices.blue::before{
+    background-image: url(../images/announcement/info-white.svg);
+}
+
+.notices.green {
+    background: #36B37E;
+    color: #172B4D;
+}
+.notices.green::before{
+    background-image: url(../images/announcement/heart-black.svg);
+    width: 22px;
+}

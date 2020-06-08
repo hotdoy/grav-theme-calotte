@@ -1,0 +1,82 @@
+<div class="header__shim"></div>
+
+{# LANDSCAPE ONSCROLL #}
+<section id="header-landscape-onscroll" class="landscape">
+    <div class="wrapper">
+        
+        {# LOGO #}
+        <a class="logo" href="{{ home_url }}">{% include 'partials/logo.html.twig' %}</a>
+
+        {# NAV #}
+        <nav class="nav">
+            <ul>
+                <li class="lang">{% include 'partials/lang.html.twig' %}</li>
+                {% for p in pages.children.visible %}
+                <li class="link"><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+    </div>
+</section>
+
+{# LANDSCAPE #}
+<section id="header-landscape" class="landscape">
+    <div class="wrapper">
+        
+        {# LOGO #}
+        <a class="logo" href="{{ home_url }}">{% include 'partials/logo.html.twig' %}</a>
+
+        {# NAV #}
+        <nav class="nav">
+        	<ul>
+        		<li class="lang">{% include 'partials/lang.html.twig' %}</li>
+           		{% for p in pages.children.visible %}
+        		<li class="link"><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
+    			{% endfor %}
+    		</ul>
+        </nav>
+
+    </div>
+</section>
+
+{# PORTRAIT ONSCROLL #}
+<section id="header-portrait-onscroll" class="portrait">
+    <div class="wrapper">
+    
+        {# LOGO #}
+        <a class="logo" href="{{ home_url }}">{% include 'partials/logo.html.twig' %}</a>
+
+        {# TOGGLE #}
+        <button class="header-panel__on material-icons">menu</button>
+    </div>
+</section>
+
+{# PORTRAIT #}
+<section id="header-portrait" class="portrait">
+    <div class="wrapper">
+        
+        {# LOGO #}
+        <a class="logo" href="{{ home_url }}">{% include 'partials/logo.html.twig' %}</a>
+
+        {# TOGGLE #}
+        <button class="header-panel__on material-icons">menu</button>
+        
+        {# PANEL #}
+        <nav class="panel">
+            <div class="panel__header">
+                <a class="logo" href="{{ home_url }}">{% include 'partials/logo.html.twig' %}</a>
+                <button class="header-panel__off material-icons">close</button>
+            </div>
+            <ul>
+                {% for p in pages.children.visible %}
+                <li><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
+                {% endfor %}
+                <li class="lang">{% include 'partials/lang.html.twig' %}</li>
+            </ul>
+        </nav>
+
+    </div>
+</section>
+
+

@@ -1,0 +1,17 @@
+title: Content
+'@extends': modular/module
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+
+        options:
+          fields:
+
+            header.optional_classes:
+              markdown: true
+              description: '```padded```'

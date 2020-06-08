@@ -1,4 +1,4 @@
-title: Splash
+title: MediaText
 '@extends': modular/module
 
 form:
@@ -8,7 +8,6 @@ form:
       active: 1
 
       fields:
-
         content:
           type: tab
           title: Content
@@ -17,10 +16,18 @@ form:
             header.selected_media:
               label: Media
               type: pagemediaselect
-
+              
             header.selected_media_alt:
               type: text
               label: Media Alt
+
+            header.media_position:
+              type: toggle
+              label: Media Position
+              default: left
+              options: 
+                left: 'Left'
+                right: 'Right'
 
         options:
           type: tab
@@ -36,4 +43,4 @@ form:
               type: text
               label: Optional Classes
               markdown: true
-              description: '```header```, ```header_fullscreen```, ```smaller_h1```'
+              description: '`text_align_center`, `media_width_70`, `media_width_50`, `media_width_20`'

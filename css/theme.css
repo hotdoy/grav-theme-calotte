@@ -1,0 +1,157 @@
+/*===========================================
+					VARS 
+============================================*/
+
+html {
+  --color-bg: #f1f1f1;
+  --color-fg: #313131;
+  --color-hl: #009688;
+  --color-hl-inverted: #FFF;
+
+  --width-tight: 735px;
+  --width-body: 1200px;
+  --width-site: 1600px;
+  --width-full: 1920px;
+  --gutter: 2rem;
+  --rhythm: 10rem;
+  --header-heigth: 5rem;
+}
+
+@media (max-width: 735px) {
+  html {
+    --rhythm: 8rem;
+  }
+}
+@media (max-width: 380px) {
+  html {
+    --rhythm: 6rem;
+    --gutter: 1rem;
+  }
+}
+
+
+
+
+
+/*===========================================
+					FONTS 
+============================================*/
+
+/* inter-regular - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../../calottecore/fonts/Inter/inter-v1-latin-regular.woff2') format('woff2'),
+       url('../../calottecore/fonts/Inter/inter-v1-latin-regular.woff') format('woff'); 
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lexend Deca Regular'), local('LexendDeca-Regular'),
+       url('../../calottecore/fonts/LexendDeca/lexend-deca-v1-latin-regular.woff2') format('woff2'), 
+       url('../../calottecore/fonts/LexendDeca/lexend-deca-v1-latin-regular.woff') format('woff'); 
+}
+
+
+
+html {
+  --font-base: 'Inter', sans-serif;
+  --font-alt: 'Lexend Deca', serif;
+  font-size: 16px;
+  font-family: var(--font-base);
+}
+
+h1, h2, h3, blockquote {
+  font-family: var(--font-alt);
+}
+
+
+
+
+
+/*===========================================
+					MISC 
+============================================*/
+
+body {
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+}
+
+::selection {
+  background-color: var(--color-hl); 
+  color: var(--color-hl-inverted);
+}
+
+
+
+
+
+/*===========================================
+					MODULES 
+============================================*/
+
+.module {
+  position: relative;
+  margin-top: var(--rhythm);
+  z-index: 1000;
+}
+
+/*FIX FIRST MODULE TOP MARGIN*/
+#header-landscape + .module,
+#header-onscroll + .module,
+#header-portrait + .module {
+    margin-top: calc(var(--rhythm) - (var(--rhythm) / 2));
+}
+
+
+
+
+
+/*===========================================
+					UTILS 
+============================================*/
+
+/*BREAKPOINT*/
+
+.landscape{display: block;}
+@media (max-width: 735px) {.landscape {display: none;}}
+.portrait {display: block;}
+@media (min-width: 735px) {.portrait {display: none;}}
+
+
+/*WIDTH*/
+
+.tight {
+  max-width: var(--width-tight);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.body {
+  max-width: var(--width-body);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.site {
+  max-width: var(--width-site);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.full {
+  max-width: var(--width-full);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*RHYTHM*/
+
+.rhythm {
+  margin-top: var(--rhythm);
+}
