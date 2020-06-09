@@ -1,7 +1,6 @@
-var Reveal = (function(){
-	var self = {};
+var Reveal = {
 
-	var RevealElement = function(e) {
+	RevealElement: function(e) {
 		if (e.classList.contains('reveal--hidden')) {
 			let revealClass = e.dataset.reveal.length ? e.dataset.reveal : 'reveal';
 			if (!!revealClass) {
@@ -9,23 +8,23 @@ var Reveal = (function(){
 				e.classList.add(...revealClassArray);
 		        setTimeout(function(){ 
 		        	e.classList.remove('reveal--hidden');
-		        }, TotalDelay(e));
+		        }, Reveal.ComputeDelay(e));
 			    e.addEventListener('transitionend', () =>{
 			    	e.classList.remove('reveal--hidden');	
 			    })
 			}
 		}
-	};
+	},
 
-	var TotalDelay = function(e) {
+	ComputeDelay: function(e) {
 		let style = getComputedStyle(e);
-		let adu = parseFloat(style.animationDuration.slice(0,-1));
-		let ade = parseFloat(style.animationDelay.slice(0,-1));
-		let totalDelay = (adu + ade) * 1000;
+		let duration = parseFloat(style.animationDuration.slice(0,-1));
+		let delay = parseFloat(style.animationDelay.slice(0,-1));
+		let totalDelay = (duration + delay) * 1000;
 		return totalDelay;
-	};
+	},
 
-	var PrimeChildren = function() {
+	PrimeChildren: function() {
 		let e = document.querySelectorAll('[data-reveal-children]');
 		if (!!e) {
 			for (var i0 = 0; i0 < e.length; i0++) {
@@ -38,10 +37,10 @@ var Reveal = (function(){
 				}
 			}		
 		}
-	};
+	},
 
-	self.Init = function() {
-		PrimeChildren();
+	Init: function() {
+		Reveal.PrimeChildren();
 		let elements = document.querySelectorAll('[data-reveal]');
 		let delay = document.querySelector('[data-reveal-initdelay]');
 		delay = delay ? delay.dataset.revealInitdelay : '0';
@@ -58,13 +57,11 @@ var Reveal = (function(){
 			elements.forEach(e => {
 				if (e.intersectionRatio > 0) {
 					observer.unobserve(e.target);
-					RevealElement(e.target);
+					Reveal.RevealElement(e.target);
 				}
 			})
 		}
-	};
-	
-	return self;
-}());
+	},
+};
 
 Reveal.Init();
