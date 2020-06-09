@@ -43,8 +43,8 @@ html {
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../../calottecore/fonts/Inter/inter-v1-latin-regular.woff2') format('woff2'),
-       url('../../calottecore/fonts/Inter/inter-v1-latin-regular.woff') format('woff'); 
+       url('../fonts/Inter/inter-v1-latin-regular.woff2') format('woff2'),
+       url('../fonts/Inter/inter-v1-latin-regular.woff') format('woff'); 
 }
 
 @font-face {
@@ -52,8 +52,8 @@ html {
   font-style: normal;
   font-weight: 400;
   src: local('Lexend Deca Regular'), local('LexendDeca-Regular'),
-       url('../../calottecore/fonts/LexendDeca/lexend-deca-v1-latin-regular.woff2') format('woff2'), 
-       url('../../calottecore/fonts/LexendDeca/lexend-deca-v1-latin-regular.woff') format('woff'); 
+       url('../fonts/LexendDeca/lexend-deca-v1-latin-regular.woff2') format('woff2'), 
+       url('../fonts/LexendDeca/lexend-deca-v1-latin-regular.woff') format('woff'); 
 }
 
 
