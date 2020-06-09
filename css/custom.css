@@ -45,19 +45,19 @@
 /*BUTTONS=========================================================================*/
 
 a.btn-link:after {
-	background-image: url(../../calottecore/images/buttons/chevron_right-green.svg);
+	background-image: url(../images/buttons/chevron_right-green.svg);
 }
 
 a.btn-down:after {
-	background-image: url(../../calottecore/images/buttons/arrow_down-green.svg);
+	background-image: url(../images/buttons/arrow_down-green.svg);
 }
 
 a.btn-ext:after {
-	background-image: url(../../calottecore/images/buttons/open_in_new-green.svg);
+	background-image: url(../images/buttons/open_in_new-green.svg);
 }
 
 a.btn-back:before {	
-	background-image: url(../../calottecore/images/buttons/chevron_left-green.svg);
+	background-image: url(../images/buttons/chevron_left-green.svg);
 }
 
 a.btn-round:hover,

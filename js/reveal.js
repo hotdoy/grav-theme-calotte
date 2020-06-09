@@ -2,16 +2,16 @@ var Reveal = (function(){
 	var self = {};
 
 	var RevealElement = function(e) {
-		if (e.classList.contains('unrevealed')) {
-			let revealClass = e.getAttribute('data-reveal').length ? e.getAttribute('data-reveal') : 'revealed';
+		if (e.classList.contains('reveal--hidden')) {
+			let revealClass = e.dataset.reveal.length ? e.dataset.reveal : 'reveal';
 			if (!!revealClass) {
 				let revealClassArray = revealClass.split(" ");
 				e.classList.add(...revealClassArray);
 		        setTimeout(function(){ 
-		        	e.classList.remove('unrevealed');
+		        	e.classList.remove('reveal--hidden');
 		        }, TotalDelay(e));
 			    e.addEventListener('transitionend', () =>{
-			    	e.classList.remove('unrevealed');	
+			    	e.classList.remove('reveal--hidden');	
 			    })
 			}
 		}
@@ -20,10 +20,8 @@ var Reveal = (function(){
 	var TotalDelay = function(e) {
 		let style = getComputedStyle(e);
 		let adu = parseFloat(style.animationDuration.slice(0,-1));
-		let tdu = parseFloat(style.transitionDuration.slice(0,-1));
 		let ade = parseFloat(style.animationDelay.slice(0,-1));
-		let tde = parseFloat(style.transitionDelay.slice(0,-1));
-		let totalDelay = (adu + ade + tde + tdu) * 1000;
+		let totalDelay = (adu + ade) * 1000;
 		return totalDelay;
 	};
 
@@ -45,11 +43,11 @@ var Reveal = (function(){
 	self.Init = function() {
 		PrimeChildren();
 		let elements = document.querySelectorAll('[data-reveal]');
-		let delay = document.querySelector('[data-reveal-delay]');
-		delay = delay ? delay.dataset.revealDelay : '0';
+		let delay = document.querySelector('[data-reveal-initdelay]');
+		delay = delay ? delay.dataset.revealInitdelay : '0';
 		let observer = new IntersectionObserver(onIntersection, {rootMargin: '-10px', threshold: 0.01});	
 		elements.forEach(e => {
-			e.classList.add('unrevealed');
+			e.classList.add('reveal--hidden');
 		});
 		setTimeout(function(){
 			elements.forEach(e => {
