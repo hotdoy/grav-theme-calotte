@@ -16,4 +16,4 @@ function loading(){
 }
 loading();
 
-// Always use transition for the loading div andd animations for whatever moving things you put in it
+// Always use transition for the loading element and animations for whatever moving things you put in it
