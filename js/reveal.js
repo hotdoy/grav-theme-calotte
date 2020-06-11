@@ -1,67 +1,95 @@
-var Reveal = {
+const Reveal = {
 
-	RevealElement: function(e) {
-		if (e.classList.contains('reveal--hidden')) {
-			let revealClass = e.dataset.reveal.length ? e.dataset.reveal : 'reveal';
-			if (!!revealClass) {
-				let revealClassArray = revealClass.split(" ");
-				e.classList.add(...revealClassArray);
-		        setTimeout(function(){ 
-		        	e.classList.remove('reveal--hidden');
-		        }, Reveal.ComputeDelay(e));
-			    e.addEventListener('transitionend', () =>{
-			    	e.classList.remove('reveal--hidden');	
-			    })
-			}
+	sel: "[data-reveal]",
+	defaultRevealClass: "reveal",
+	defaultHiddenClass: "reveal--hidden",
+	defaultInitialDelay: 0,
+
+
+	Reveal: function(e) {
+		const classes = Reveal.GetRevealClass(e)
+		e.classList.add(...classes);
+	    e.addEventListener('animationend', () =>{
+	    	e.classList.remove(Reveal.defaultHiddenClass);	
+	    })
+	},
+
+
+	GetRevealClass: function(e) {
+		if (!!e) {
+			let rawClass = e.dataset.reveal.length ? e.dataset.reveal : Reveal.defaultRevealClass;
+			let classArray = rawClass.split(" ");
+			return classArray;
 		}
 	},
 
-	ComputeDelay: function(e) {
-		let style = getComputedStyle(e);
-		let duration = parseFloat(style.animationDuration.slice(0,-1));
-		let delay = parseFloat(style.animationDelay.slice(0,-1));
-		let totalDelay = (duration + delay) * 1000;
-		return totalDelay;
+
+	GetAutoRevealClass: function(e) {
+		if (!!e) {
+
+			let rawClass = e.dataset.autoReveal.length ? e.dataset.autoReveal : Reveal.defaultRevealClass;
+			let classArray = rawClass.split(" ");
+			return classArray;
+		}
 	},
 
-	PrimeChildren: function() {
-		let e = document.querySelectorAll('[data-reveal-children]');
-		if (!!e) {
-			for (var i0 = 0; i0 < e.length; i0++) {
-				let classList = e[i0].dataset.revealChildren ? e[i0].dataset.revealChildren : '';
-				let c = e[i0].children;
-				if (!!c) {
-					for (var i1 = 0; i1 < c.length; i1++) {
-						c[i1].setAttribute('data-reveal', classList);
+
+	PropagateAutoReveal: function(context) {
+		let el = context.querySelectorAll("[data-auto-reveal]");
+		if (!!el) {
+			for (let e of el) {
+				let classList = Reveal.GetAutoRevealClass(e);
+				let children = e.children;
+				if (!!children) {
+					for (let c of children) {
+						c.setAttribute("data-reveal", classList);
 					}
 				}
 			}		
 		}
 	},
 
-	Init: function() {
-		Reveal.PrimeChildren();
-		let elements = document.querySelectorAll('[data-reveal]');
-		let delay = document.querySelector('[data-reveal-initdelay]');
-		delay = delay ? delay.dataset.revealInitdelay : '0';
-		let observer = new IntersectionObserver(onIntersection, {rootMargin: '-10px', threshold: 0.01});	
-		elements.forEach(e => {
-			e.classList.add('reveal--hidden');
-		});
-		setTimeout(function(){
-			elements.forEach(e => {
-				observer.observe(e);
-			});
-		}, delay);
-		function onIntersection(elements) {
-			elements.forEach(e => {
-				if (e.intersectionRatio > 0) {
-					observer.unobserve(e.target);
-					Reveal.RevealElement(e.target);
-				}
-			})
+
+	GetInitialDelay: function() {
+		const e = document.querySelector("[data-reveal-delay]");
+		const delay = e ? e.dataset.revealDelay : Reveal.defaultInitialDelay;
+		return delay;
+	},
+
+
+	HideElements: function(el) {
+		for (let e of el){
+			e.classList.add(Reveal.defaultHiddenClass);
 		}
 	},
+
+
+	Observe: function(el) {
+		let observer = new IntersectionObserver(onIntersection, {rootMargin: '-10px', threshold: 0.01});
+		setTimeout(function(){
+			for (let e of el){
+				observer.observe(e);
+			}
+		}, Reveal.GetInitialDelay());
+
+		function onIntersection(el) {
+			for (let e of el) {
+				if (e.intersectionRatio > 0) {
+					observer.unobserve(e.target);
+					Reveal.Reveal(e.target);
+				}
+			}
+		}
+	},
+
+
+	Init: function(context) {
+		Reveal.PropagateAutoReveal(context);
+		let el = context.querySelectorAll(Reveal.sel);
+		Reveal.HideElements(el);
+		Reveal.Observe(el);
+	},
+
 };
 
-Reveal.Init();
+Reveal.Init(document.body);

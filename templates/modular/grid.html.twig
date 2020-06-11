@@ -3,7 +3,7 @@
 	{% if page.content %}
 	<div class="grid__content">{{ page.content }}</div>
 	{% endif %}
-	<div class="grid__grid" data-reveal-children>
+	<div class="grid__grid" data-auto-reveal>
 		{% for item in page.header.items %}
 		<div class="grid__item">{{ item.content|markdown }}</div>
 		{% endfor %}
