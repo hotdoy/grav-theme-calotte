@@ -1,5 +1,5 @@
 .carousel {
-
+	overflow: hidden;
 }
 
 .carousel__content {
@@ -29,7 +29,6 @@
     justify-content: flex-start;
 	width: 280px;
 	height:400px;
-	margin-right: var(--gutter);
 	padding: 2rem;
 	background-color: #f1f1f1;
 }
