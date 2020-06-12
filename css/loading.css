@@ -40,7 +40,7 @@ body.loaded #loading.transition {
 	width: 100px;
 	color: white;
 	animation-name: intro;
-	animation-duration: 0.5s;
+	animation-duration: 0.4s;
 }
 
 @keyframes intro {

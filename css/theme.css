@@ -102,10 +102,8 @@ body {
 }
 
 /*FIX FIRST MODULE TOP MARGIN*/
-#header-landscape + .module,
-#header-onscroll + .module,
-#header-portrait + .module {
-    margin-top: calc(var(--rhythm) - (var(--rhythm) / 2));
+#content > .module:nth-child(1) {
+    margin-top: calc(var(--rhythm) - ((var(--rhythm) - (var(--header-heigth)/2))));
 }
 
 

@@ -104,22 +104,6 @@ a.btn-square:hover {
 
 
 
-/*CAROUSEL=============================================================================*/
-
-.carousel__item {
-	background-color: #e8e8e8;
-	border-radius: 20px;
-}
-
-.carousel__item img {
-	justify-content: flex-start;
-	width: 20%;
-}
-
-
-
-
-
 /*FOOTER===========================================================================*/
 
 .footer__top {

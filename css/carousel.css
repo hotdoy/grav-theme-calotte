@@ -1,5 +1,5 @@
 .carousel {
-	overflow: hidden;
+
 }
 
 .carousel__content {
@@ -12,22 +12,21 @@
 	margin-top: 0;
 }
 
-.carousel__ctn {
+.swiper-container {
 	margin-left: var(--gutter);
+	overflow: visible;
 	width: 100%;
-	max-width: var(--width-full);
 }
 @media (min-width: 1600px) {
-	.carousel__ctn {
+	.swiper-container {
 		margin-left: calc((((100% - 1600px) / 2) + var(--gutter)));
 	}
 }
 
-.carousel__item {
+.swiper-slide {
 	display: flex;
 	flex-direction: column;
     justify-content: flex-start;
-
 	width: 280px;
 	height:400px;
 	margin-right: var(--gutter);
@@ -36,34 +35,47 @@
 }
 
 @media (min-width: 735px) {
-	.carousel__item {
+	.swiper-slide {
 		width: 346px;
 	}
 }
 
-.carousel__item * {
+.swiper-slide * {
 	max-width: 100%;
 }
 
-.carousel__item img,
-.carousel__item video{
+.swiper-slide img,
+.swiper-slide video{
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	max-width: 100%;
 }
 
-
-.carousel__item *:first-child {
+.swiper-slide *:first-child {
 	margin-top: 0;
 }
 
-.carousel__item h2, .carousel__item h3, .carousel__item h4, .carousel__item h5, .carousel__item h6,
-.carousel__item p {
+.swiper-slide h2, .swiper-slide h3, .swiper-slide h4, .swiper-slide h5, .swiper-slide h6,
+.swiper-slide p {
 	padding: 0;
 	margin-left: 0;
 }
 
-.flickity-viewport {
-    overflow: visible !important;
+
+
+
+
+/*================================
+CUSTOM
+==================================*/
+
+.carousel .swiper-slide {
+	background-color: #e8e8e8;
+	border-radius: 20px;
+}
+
+.carousel .swiper-slide img {
+	justify-content: flex-start;
+	width: 20%;
 }
