@@ -10,7 +10,7 @@
         {# NAV #}
         <nav class="nav">
             <ul>
-                <li class="lang">{% include 'partials/lang.html.twig' %}</li>
+                <li class="langswitcher-ctn">{% include 'partials/langswitcher.html.twig' %}</li>
                 {% for p in pages.children.visible %}
                 <li class="link"><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
                 {% endfor %}
@@ -30,7 +30,7 @@
         {# NAV #}
         <nav class="nav">
         	<ul>
-        		<li class="lang">{% include 'partials/lang.html.twig' %}</li>
+        		<li class="langswitcher-ctn">{% include 'partials/langswitcher.html.twig' %}</li>
            		{% for p in pages.children.visible %}
         		<li class="link"><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
     			{% endfor %}
@@ -78,7 +78,7 @@
                 {% for p in pages.children.visible %}
                 <li><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
                 {% endfor %}
-                <li class="lang">{% include 'partials/lang.html.twig' %}</li>
+                <li class="langswitcher-ctn">{% include 'partials/langswitcher.html.twig' %}</li>
             </ul>
         </nav>
 

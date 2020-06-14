@@ -25,6 +25,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+{% if config.plugins.langswitcher.enabled %}
+{% include 'partials/langswitcher.hreflang.html.twig' %}
+{% endif %}
+
 {% for meta in page.metadata %}
 <meta {% if meta.name %}name="{{ meta.name }}" {% endif -%}
 {% if meta.http_equiv %}http-equiv="{{ meta.http_equiv }}" {% endif -%}
