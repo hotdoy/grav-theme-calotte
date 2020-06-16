@@ -1,7 +1,7 @@
-let	b = document.body;
-let onTriggers = document.getElementsByClassName("header-panel__on");
-let offTriggers = document.getElementsByClassName("header-panel__off");
-let lastOffset = 0;
+const	b = document.body;
+const onTriggers = document.getElementsByClassName("header-panel__on");
+const offTriggers = document.getElementsByClassName("header-panel__off");
+const lastOffset = 0;
 
 for (let onTrigger of onTriggers) {
 	onTrigger.addEventListener("click", function(){

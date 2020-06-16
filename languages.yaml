@@ -4,12 +4,12 @@ fr:
             TITLE: "Calotte"
             STREETADDRESS: "7723 Ave. Henri Julien<br>Montréal, Québec<br>H2R 2B6"
         MAILCHIMP:
-            TITLE: "Infolettre"
+            TITLE: "Ajoutez votre email à notre liste de contacts.<br> On envois pas de spam. Promis! 👌"
             EMAIL: "Email"
             SUBMIT: "S'inscrire"
         ERROR_404:
             TITLE: "404"
-            CONTENT: "Oh non! Nous n'avons pas trouvé la page que vous cherchez."
+            CONTENT: "Oups! La page que vous cherchez ne semble pas exister."
         LEGAL:
             TERMS: "Termes et conditions"
 
@@ -19,7 +19,7 @@ en:
     THEME:
         ADDRESS: "<h2>Calotte</h2>7723 Ave. Henri Julien<br>Montreal, Quebec<br>H2R 2B6"
         MAILCHIMP:
-            TITLE: "Newsletter"
+            TITLE: "Ajoutez votre email à notre liste de contacts.<br> On envois pas de spam. Promis! 👌"
             EMAIL: "Email"
             SUBMIT: "Subscribe"
         ERROR_404:

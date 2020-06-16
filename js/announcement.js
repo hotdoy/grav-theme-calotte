@@ -1,10 +1,9 @@
 var Announcement = (function(){
     var self = {};
 
-    var AddAction = function(id, store, lbl) {
+    var AddActionDone = function(id, store) {
         let e = document.createElement('div');
-        e.className = 'announcement__label';
-        e.innerHTML = lbl;
+        e.className = 'announcement__done';
         e.addEventListener("click", function () {
             if (!!store && store == 1) {
                localStorage.setItem(id, Date.now()); 
@@ -14,11 +13,11 @@ var Announcement = (function(){
         return e;
     }
 
-    self.CreateAnnouncement = function(id, theme, store, msg, lbl) {
+    self.CreateAnnouncement = function(id, theme, store, msg) {
         let e = document.createElement('div');
         e.className = 'announcement ' + theme;
         e.innerHTML = msg;
-        e.appendChild(AddAction(id, store, lbl));
+        e.appendChild(AddActionDone(id, store));
         $('body').append(e);
     }
 
@@ -29,10 +28,9 @@ var Announcement = (function(){
             let theme = b.dataset.theme;
             let store = b.dataset.store;
             let msg = b.innerHTML;
-            let lbl = b.dataset.lbl;
             let storedValue = id ? localStorage.getItem(id) : null;  
             if ((storedValue == null || Date.now() - storedValue > 86400000) && msg) {
-                self.CreateAnnouncement(id, theme, store, msg, lbl);            
+                self.CreateAnnouncement(id, theme, store, msg);            
             };
             b.remove();
 

@@ -1,6 +1,11 @@
 .splash {
-	position: relative;
-	margin-top: var(--rhythm);
+	padding: 0 var(--gutter);
+}
+
+@media (min-width: 735px) {
+	.splash {
+		padding: 0;
+	}
 }
 
 .splash__ctn {
@@ -8,10 +13,13 @@
 	max-width: var(--width-site);
 	width: 100%;
 	margin: 0 auto;
+	padding: 0 var(--gutter);
 	min-height: 25vh;
 	overflow: hidden;
 	background-color: #313131;
 }
+
+
 
 .splash__media {
 	position: absolute;
@@ -51,6 +59,11 @@
 	text-align: center;
 }
 
+/*MORE MARGIN ON BUTTONS*/
+.splash a.btn-round,
+.splash a.btn-square {
+	margin-top: 1rem;
+} 
 
 
 
@@ -60,6 +73,7 @@
 /*header*/
 .splash.header {
 	margin-top: calc(var(--header-heigth)*-1)!important;
+	padding: 0;
 }
 
 .splash.header .splash__ctn {
@@ -70,6 +84,7 @@
 /*header_fullscreen*/
 .splash.header_fullscreen {
 	margin-top: calc(var(--header-heigth)*-1)!important;
+	padding: 0;
 }
 .splash.header_fullscreen .splash__ctn {
 	padding: var(--header-heigth) 0 var(--header-heigth) 0;
@@ -87,4 +102,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/*rounded corners on media*/
+.splash.rounded .splash__ctn {
+	border-radius: 20px;
 }

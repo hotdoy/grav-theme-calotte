@@ -36,4 +36,4 @@ form:
               type: text
               label: Optional Classes
               markdown: true
-              description: '```header```, ```header_fullscreen```, ```smaller_h1```'
+              description: '```header```, ```header_fullscreen```, ```smaller_h1```, ```rounded```'

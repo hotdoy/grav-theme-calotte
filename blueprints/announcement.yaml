@@ -24,9 +24,6 @@ form:
                   type: editor
                   classes: 'CodeMirror--small'
                   label: Content
-                .label:
-                  type: text
-                  label: Label
                 .theme:
                   type: select
                   label: Theme

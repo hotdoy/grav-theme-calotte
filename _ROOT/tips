@@ -1,0 +1,6 @@
+THINGS YOU MIGHT WANT TO ADD TO HTACESS...
+
+
+Remove the Server value from HTTP header (for lightspeed)
+---------------------------------------------------------
+Header unset Server

@@ -8,17 +8,16 @@
 		{% set remember = a.remember ?? '0'  %}
 		{% set targets = a.target_pages ?? '' %}
 		{% set msg = a.content|markdown %}
-		{% set lbl = a.label ?? 'ok' %}
 
 		{% if targets and page.rawroute in targets %}
-			{{ _self.announcement(id, theme, remember, msg, lbl) }}	
+			{{ _self.announcement(id, theme, remember, msg) }}	
 		{% elseif not targets %}
-			{{ _self.announcement(id, theme, remember, msg, lbl) }}
+			{{ _self.announcement(id, theme, remember, msg) }}
 		{% endif %}
 
 	{% endfor %}
 {% endfor %}
 
-{% macro announcement(id, theme, remember, msg, lbl) %}
-    <div data-announcement data-id="{{ id }}" data-theme="{{ theme }}" data-store="{{ remember }}" data-lbl="{{ lbl }}">{{ msg }}</div>
+{% macro announcement(id, theme, remember, msg) %}
+    <div data-announcement data-id="{{ id }}" data-theme="{{ theme }}" data-store="{{ remember }}">{{ msg }}</div>
 {% endmacro %}

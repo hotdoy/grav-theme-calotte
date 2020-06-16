@@ -103,7 +103,7 @@ body {
 
 /*FIX FIRST MODULE TOP MARGIN*/
 #content > .module:nth-child(1) {
-    margin-top: calc(var(--rhythm) - ((var(--rhythm) - (var(--header-heigth)/2))));
+    margin-top: calc(var(--rhythm) - var(--header-heigth)/2);
 }
 
 

@@ -1,6 +1,5 @@
 const Reveal = {
 
-	sel: "[data-reveal]",
 	defaultRevealClass: "reveal",
 	defaultHiddenClass: "reveal--hidden",
 	defaultInitialDelay: 0,
@@ -85,7 +84,7 @@ const Reveal = {
 
 	Init: function(context) {
 		Reveal.PropagateAutoReveal(context);
-		let el = context.querySelectorAll(Reveal.sel);
+		let el = context.querySelectorAll("[data-reveal]");
 		Reveal.HideElements(el);
 		Reveal.Observe(el);
 	},
