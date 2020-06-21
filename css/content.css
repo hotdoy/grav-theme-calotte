@@ -41,8 +41,3 @@
 
 
 /*OPTIONALS*/
-
-.content.padded {
-	padding: var(--rhythm) 0 var(--rhythm) 0;
-	background-color: #f1f1f1;
-}

@@ -4,7 +4,7 @@ fr:
             TITLE: "Calotte"
             STREETADDRESS: "7723 Ave. Henri Julien<br>Montréal, Québec<br>H2R 2B6"
         MAILCHIMP:
-            TITLE: "Ajoutez votre email à notre liste de contacts.<br> On envois pas de spam. Promis! 👌"
+            TITLE: "Ajoutez votre email à notre liste de contacts.<br> On n'envoie pas de spam. Promis! 👌"
             EMAIL: "Email"
             SUBMIT: "S'inscrire"
         ERROR_404:
@@ -19,7 +19,7 @@ en:
     THEME:
         ADDRESS: "<h2>Calotte</h2>7723 Ave. Henri Julien<br>Montreal, Quebec<br>H2R 2B6"
         MAILCHIMP:
-            TITLE: "Ajoutez votre email à notre liste de contacts.<br> On envois pas de spam. Promis! 👌"
+            TITLE: "Ajoutez votre email à notre liste de contacts.<br> On n'envoie pas de spam. Promis! 👌"
             EMAIL: "Email"
             SUBMIT: "Subscribe"
         ERROR_404:

@@ -1,7 +1,7 @@
-var Announcement = (function(){
-    var self = {};
+let Announcement = (function(){
+    let self = {};
 
-    var AddActionDone = function(id, store) {
+    let AddActionDone = function(id, store) {
         let e = document.createElement('div');
         e.className = 'announcement__done';
         e.addEventListener("click", function () {

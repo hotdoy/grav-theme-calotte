@@ -28,7 +28,7 @@ body.loaded #loading.transition {
 
 /*INTRO*/
 #loading.intro {
-	background-color: var(--color-hl);
+	background-color: #064851;
 	z-index: 9999;	
 
 	display: flex;

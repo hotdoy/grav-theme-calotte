@@ -106,6 +106,17 @@ body {
     margin-top: calc(var(--rhythm) - var(--header-heigth)/2);
 }
 
+/*OPTIONALS*/
+.module.padded {
+  padding: var(--rhythm) 0 var(--rhythm) 0;
+  background-color: #064851;
+  color: #fff;
+}
+
+.module.no_margin {
+  margin-top: 0;
+}
+
 
 
 

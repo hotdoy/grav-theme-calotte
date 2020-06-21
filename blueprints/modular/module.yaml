@@ -42,7 +42,8 @@ form:
             header.optional_classes:
               type: text
               label: Optional Classes
-              description: ''
+              markdown: true
+              description: '```padded```, ```no_margin```'
 
             order_title:
               type: section

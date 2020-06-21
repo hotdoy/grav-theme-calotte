@@ -33,6 +33,7 @@
 .grid__item {
     width: 100%;
     background-color: #f1f1f1;
+    color: var(--color-fg);
     padding: var(--gutter);
 }
 

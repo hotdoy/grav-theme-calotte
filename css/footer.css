@@ -88,3 +88,8 @@ footer{
 	width: 49px;
 	height: 17px;
 }
+
+/*PAGE OPTIONALS*/
+body.no_footer_margin footer {
+	margin-top: 0;
+}
