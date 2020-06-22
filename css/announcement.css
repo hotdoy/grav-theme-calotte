@@ -44,6 +44,29 @@ div[data-announcement] {
     }
 }
 
+.announcement__done {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    color: inherit;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00002 16.2L4.80002 12L3.40002 13.4L9.00002 19L21 7L19.6 5.6L9.00002 16.2Z' fill='currentColor'/%3E%3C/svg%3E%0A");    
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+@keyframes announcement {
+    0% {opacity:0; transform: translateY(110%);}
+    50% {opacity:0; transform: translateY(110%);}
+    75% {opacity:1; transform: translateY(-10%);}
+    100% {transform: translateY(0%);}
+}
+
+
+
 .announcement.error{
     background-color: #FF5630;
     color: #fff;
@@ -51,6 +74,7 @@ div[data-announcement] {
 
 .announcement.warning{
     background-color: #FFAB00;
+    color: #172B4D;
 }
 
 .announcement.notice{
@@ -60,6 +84,7 @@ div[data-announcement] {
 
 .announcement.success{
     background-color: #36B37E;
+    color: #172B4D;
 }
 
 .announcement.gdpr{
@@ -72,25 +97,4 @@ div[data-announcement] {
     padding: 10px 10px 0px 0px;
     cursor: pointer;
     text-decoration: underline;
-}
-
-.announcement__done {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-    padding: 10px;
-    color: inherit;
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00002 16.2L4.80002 12L3.40002 13.4L9.00002 19L21 7L19.6 5.6L9.00002 16.2Z' fill='white'/%3E%3C/svg%3E%0A");    
-    background-position: center;
-    background-size: contain;
-    cursor: pointer;
-}
-
-@keyframes announcement {
-    0% {opacity:0; transform: translateY(110%);}
-    50% {opacity:0; transform: translateY(110%);}
-    75% {opacity:1; transform: translateY(-10%);}
-    100% {transform: translateY(0%);}
 }
