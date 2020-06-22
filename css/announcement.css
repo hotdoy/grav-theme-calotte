@@ -9,7 +9,7 @@ div[data-announcement] {
     right: 1rem;
     margin: 0 0 0 auto;
     max-width: 411px;
-    padding: 1rem 3rem 1rem 2rem;
+    padding: 2rem 3rem 2rem 2rem;
     background-color: #FAFBFC;
     color: #172B4D;
     font-family: var(--font-alt);
