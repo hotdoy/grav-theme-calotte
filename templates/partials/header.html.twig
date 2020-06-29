@@ -11,7 +11,7 @@
         <nav class="nav">
             <ul>
                 <li class="langswitcher-ctn">{% include 'partials/langswitcher.html.twig' %}</li>
-                {% for p in pages.children.visible %}
+                {% for p in pages.children.visible if p.url != home_url  %}
                 <li><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
                 {% endfor %}
             </ul>
@@ -31,7 +31,7 @@
         <nav class="nav">
         	<ul>
         		<li class="langswitcher-ctn">{% include 'partials/langswitcher.html.twig' %}</li>
-           		{% for p in pages.children.visible %}
+           		{% for p in pages.children.visible if p.url != home_url  %}
         		<li><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
     			{% endfor %}
     		</ul>
