@@ -12,7 +12,6 @@ div[data-announcement] {
     padding: 2rem 3rem 2rem 2rem;
     background-color: #FAFBFC;
     color: #172B4D;
-    font-family: var(--font-alt);
     font-size: 14px;
     line-height: 1.4;
     z-index: 4000;
@@ -34,7 +33,6 @@ div[data-announcement] {
 
 .announcement p {
     margin: 0;
-    font-family: var(--font-alt);
     font-size: 12px;
 }
 

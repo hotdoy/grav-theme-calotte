@@ -43,24 +43,32 @@ html {
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/Inter/inter-v1-latin-regular.woff2') format('woff2'),
-       url('../fonts/Inter/inter-v1-latin-regular.woff') format('woff'); 
+       url('../fonts/Inter/inter-v2-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/Inter/inter-v2-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* inter-700 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/Inter/inter-v2-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/Inter/inter-v2-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/*ITC Souvenir Light*/
 @font-face {
-  font-family: 'Lexend Deca';
+  font-family: 'ITC Souvenir Light';
   font-style: normal;
   font-weight: 400;
-  src: local('Lexend Deca Regular'), local('LexendDeca-Regular'),
-       url('../fonts/LexendDeca/lexend-deca-v1-latin-regular.woff2') format('woff2'), 
-       url('../fonts/LexendDeca/lexend-deca-v1-latin-regular.woff') format('woff'); 
+  src: local('ITC Souvenir Light'),
+       url('../fonts/ITCSouvenir/itc-souvenir-std-light.woff2') format('woff2'),
+       url('../fonts/ITCSouvenir/itc-souvenir-std-light.woff') format('woff');
 }
-
-
 
 html {
   --font-base: 'Inter', sans-serif;
-  --font-alt: 'Lexend Deca', serif;
+  --font-alt: 'ITC Souvenir Light', serif;
   font-size: 16px;
   font-family: var(--font-base);
 }

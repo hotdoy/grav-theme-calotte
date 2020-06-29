@@ -1,5 +1,5 @@
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1.4;
 }
 @media (min-width: 735px) {
@@ -9,24 +9,24 @@ h1 {
 }
 
 h2 {
-  margin-top: 3rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.4;
+  margin-top: 3rem;
 }
 @media (min-width: 735px) {
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 
 h3 {
   margin-top: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.4;
 }
 @media (min-width: 735px) {
   h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -55,14 +55,14 @@ sup {
 }
 
 blockquote>p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0 auto;
   margin-top: 2rem;
   padding: 0;
 }
-@media (min-width: 735px) {
+@media (min-width: 1200px) {
   blockquote>p {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 

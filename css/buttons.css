@@ -3,7 +3,6 @@
 a.btn-link {
 	user-select: none;
 	color: var(--color-hl);
-	font-family: var(--font-alt);
 	text-decoration: none;
 }
 
@@ -11,7 +10,7 @@ a.btn-link:after {
 	content: "";
 	width: 12px;
 	height: 12px;
-	background-image: url(../images/buttons/chevron_right-blue.svg);
+	background-image: url(../images/buttons/chevron_right-green.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	display: inline-block;
@@ -33,7 +32,6 @@ a.btn-link:hover:after {
 a.btn-down {
 	user-select: none;
 	color: var(--color-hl);
-	font-family: var(--font-alt);
 	font-size: 14px
 	text-decoration: none;
 }
@@ -42,7 +40,7 @@ a.btn-down:after {
 	content: "";
 	width: 10px;
 	height: 10px;
-	background-image: url(../images/buttons/arrow_down-blue.svg);
+	background-image: url(../images/buttons/arrow_down-green.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	display: inline-block;
@@ -65,7 +63,6 @@ a.btn-down:hover:after {
 a.btn-ext {
 	user-select: none;
 	color: var(--color-hl);
-	font-family: var(--font-alt);
 	text-decoration: none;
 }
 
@@ -73,7 +70,7 @@ a.btn-ext:after {
 	content: "";
 	width: 12px;
 	height: 12px;
-	background-image: url(../images/buttons/open_in_new-blue.svg);
+	background-image: url(../images/buttons/open_in_new-green.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	display: inline-block;
@@ -95,7 +92,6 @@ a.btn-ext:hover:after {
 a.btn-back {
 	user-select: none;
 	color: var(--color-hl);
-	font-family: var(--font-alt);
 	text-decoration: none;
 }
 
@@ -103,7 +99,7 @@ a.btn-back:before {
 	content: "";
 	width: 12px;
 	height: 12px;
-	background-image: url(../images/buttons/chevron_left-blue.svg);
+	background-image: url(../images/buttons/chevron_left-green.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	display: inline-block;
@@ -128,7 +124,6 @@ a.btn-round,
 	display: inline-block;
 	color: var(--color-hl-inverted);
 	background-color: var(--color-hl);
-	font-family: var(--font-alt);
 	padding: 10px 25px;
     transition: all 0.2s; 
     text-decoration: none;
@@ -138,6 +133,7 @@ a.btn-round,
 
 a.btn-round:hover {
 	transform: translateY(-2px);
+	background-color: #00ad9d;
 }
 
 a.btn-round:hover:active {
@@ -156,7 +152,6 @@ a.btn-square,
 	display: inline-block;
 	color: var(--color-hl-inverted);
 	background-color: var(--color-hl);
-	font-family: var(--font-alt);
 	padding: 10px 25px;
     transition: all 0.2s; 
     text-decoration: none;
@@ -164,6 +159,7 @@ a.btn-square,
 
 a.btn-square:hover {
 	transform: translateY(-2px);
+	background-color: #00ad9d;
 }
 
 a.btn-square:hover:active {

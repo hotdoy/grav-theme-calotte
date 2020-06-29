@@ -1,6 +1,6 @@
 // Update 'version' if you need to refresh the cache
 var staticCacheName = 'static';
-var version = 'v1::';
+var version = 'v2::';
 
 // Store core files in a cache (including a page to display when offline)
 function updateStaticCache() {
@@ -8,8 +8,7 @@ function updateStaticCache() {
     .then(function (cache) {
       return cache.addAll([
         '/user/themes/calotte/fonts/Inter/inter-v1-latin-regular.woff2',   
-        '/user/themes/calotte/fonts/LexendDeca/lexend-deca-v1-latin-regular.woff2',        
-        '/offline'
+        '/user/themes/calotte/fonts/ITCSouvenir/itc-souvenir-std-light.woff2'
       ]);
     });
 };

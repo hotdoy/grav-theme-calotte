@@ -19,8 +19,6 @@
 	background-color: #313131;
 }
 
-
-
 .splash__media {
 	position: absolute;
 	top: 0;
@@ -59,11 +57,23 @@
 	text-align: center;
 }
 
-/*MORE MARGIN ON BUTTONS*/
+/*fix h1 bottom margin*/
+.splash .content h1 {
+	margin-bottom: 0;
+}
+
+/*fix button margins*/
 .splash a.btn-round,
 .splash a.btn-square {
 	margin-top: 1rem;
 } 
+
+/*shrink h1 on pretty small screen*/
+@media (max-width: 735px) {
+	.splash .content h1 {
+		font-size: 2rem;
+	}
+}
 
 
 

@@ -12,6 +12,12 @@
 	margin-right: auto;
 }
 
+.content h1 {
+	margin-bottom: var(--rhythm);
+	text-align: center;
+}
+
+
 .content hr {
 	margin: calc(var(--rhythm)/2) 0 calc(var(--rhythm)/2) 0;
     border: none;
@@ -32,12 +38,13 @@
     max-width: var(--width-tight);
 }
 
-.content blockquote p {
-	padding: 0;
+.content blockquote {
+	max-width: var(--width-body);
 }
 
+.content blockquote p {
+	padding: 0;
+	max-width: var(--width-body);
+	text-align: center;
+}
 
-
-
-
-/*OPTIONALS*/

@@ -219,7 +219,6 @@ body.header-panel--on {
     left: 0;
     right: 0;
     width: 100%;
-    font-family: var(--font-alt);
     color: var(--color-fg);
     z-index: 5000;
     height: var(--header-heigth);
@@ -271,7 +270,6 @@ body.header-panel--on {
     left: 0;
     right: 0;
     width: 100%;
-    font-family: var(--font-alt);
     background-color: var(--color-bg);
     color: var(--color-fg);
     opacity: 0;
