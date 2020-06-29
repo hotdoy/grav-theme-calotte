@@ -12,7 +12,7 @@
             <ul>
                 <li class="langswitcher-ctn">{% include 'partials/langswitcher.html.twig' %}</li>
                 {% for p in pages.children.visible %}
-                <li class="link"><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
+                <li><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
                 {% endfor %}
             </ul>
         </nav>
@@ -32,7 +32,7 @@
         	<ul>
         		<li class="langswitcher-ctn">{% include 'partials/langswitcher.html.twig' %}</li>
            		{% for p in pages.children.visible %}
-        		<li class="link"><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
+        		<li><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
     			{% endfor %}
     		</ul>
         </nav>
@@ -68,12 +68,9 @@
         
         {# PANEL #}
         <nav class="panel">
-            <div class="panel__header">
-                <a class="logo" href="{{ home_url }}">{% include 'partials/logo.html.twig' %}</a>
-                <button class="header-panel__off" aria-label="close menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-                </button>
-            </div>
+            <button class="header-panel__off" aria-label="close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            </button>
             <ul>
                 {% for p in pages.children.visible %}
                 <li><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
