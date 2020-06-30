@@ -7,7 +7,8 @@ function updateStaticCache() {
   return caches.open(version + staticCacheName)
     .then(function (cache) {
       return cache.addAll([
-        '/user/themes/calotte/fonts/Inter/inter-v1-latin-regular.woff2',   
+        '/user/themes/calotte/fonts/Inter/inter-v2-latin-regular.woff2',
+        '/user/themes/calotte/fonts/Inter/inter-v2-latin-700.woff2',   
         '/user/themes/calotte/fonts/ITCSouvenir/itc-souvenir-std-light.woff2'
       ]);
     });

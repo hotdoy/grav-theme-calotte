@@ -8,19 +8,6 @@
     padding: 0;
 }
 
-#header-landscape button,
-#header-portrait button,
-#header-portrait-onscroll button {
-    border: none;
-    background: none;
-    color: inherit;
-    padding: 0;
-    margin: 0;
-    line-height: inherit;
-    outline: none;
-    cursor: pointer;
-}
-
 #header-landscape li a:hover:active,
 #header-portrait li a:hover:active {
     transform: translateY(1px);
@@ -65,6 +52,9 @@
     height: auto;
 }
 
+#header-portrait .header-panel__on {
+    padding: 1rem 0 1rem 1rem;
+}
 
 
 
@@ -102,8 +92,9 @@
 
 .header-panel__off {
     position: fixed;
-    top: var(--gutter);
-    right: var(--gutter);
+    padding: 1rem;
+    top: calc(var(--gutter) - 1rem);
+    right: calc(var(--gutter) - 1rem);
 }
 
 #header-portrait ul {
@@ -113,6 +104,7 @@
 }
 
 #header-portrait li {
+    padding: 1rem 0 1rem 0;
     opacity: 0;
     transform: translateX(30px); 
     transition-property: opacity transform;
@@ -122,8 +114,9 @@
 
 #header-portrait li a{
     display: block;
-    padding: 1rem 0 1rem 0;
-    font-size: 1.5rem;
+    padding: 0;
+    font-size: 2.5rem;
+    line-height: 1;
 }
 
 #header-portrait a.active  {

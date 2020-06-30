@@ -18,7 +18,7 @@
 					body.classList.add('exiting');
 				}, false);
 				let preLoadLink = document.createElement("link");
-				preLoadLink.rel = 'preconnect';
+				preLoadLink.rel = 'prerender';
 				preLoadLink.href = href;
 				document.head.appendChild(preLoadLink);				
 			}
