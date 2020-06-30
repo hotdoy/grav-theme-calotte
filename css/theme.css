@@ -167,8 +167,14 @@ body {
   margin: 0 auto;
 }
 
-/*RHYTHM*/
-
 .rhythm {
   margin-top: var(--rhythm);
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; 
 }

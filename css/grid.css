@@ -58,6 +58,63 @@
 }
 
 .grid__item * + p,
+.grid__item * + h2,
 .grid__item * + h3 {
 	margin-top: 1rem;
+}
+
+.grid__item h2,.grid__item h3 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+@media (min-width: 735px) {
+  .grid__item h2,.grid__item h3 {
+    font-size: 2rem;
+  }
+}
+
+
+/* CUSTOM STUFF TO INTEGRATE ==================================================================*/
+.module.grid .grid__grid {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr); 
+	max-width: var(--width-body);
+	text-align: left;
+}
+
+@media (min-width: 735px) {
+	.module.grid .grid__grid {
+		grid-template-columns: repeat(3, 1fr); 
+	}
+}
+
+@media (min-width: 1000px) {
+	.module.grid .grid__grid {
+		grid-template-columns: repeat(3, 1fr); 
+	}
+}
+
+.module.grid .grid__item {
+    background-color: #e8e8e8;
+	border-radius: 20px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.module.grid .grid__item h2,
+.module.grid .grid__item h3,
+.module.grid .grid__item p:nth-child(1) {
+	flex-grow: 1;
+}
+
+.module.grid .grid__item .btn-round, 
+.module.grid .grid__item .btn-square {
+	width: 100%;
+}
+
+.module.grid .grid__item img {
+	width: 20%;
 }

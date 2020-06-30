@@ -1,0 +1,17 @@
+title: Landing
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            header.selected_media:
+              label: Media
+              type: pagemediaselect
+              
+            header.selected_media_alt:
+              type: text
+              label: Media Alt

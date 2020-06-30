@@ -19,16 +19,8 @@
 	background-color: #313131;
 }
 
-.splash__media {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
-.splash__media img,
-.splash__media video {
+.splash img,
+.splash video {
 	object-fit: cover;
 	object-position: center;
 	width: 100%;
@@ -37,11 +29,6 @@
 }
 
 .splash__veil {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
 	background-color: rgba(49, 49, 49, 0.5);
 	z-index: 2;
 }
