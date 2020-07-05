@@ -64,7 +64,7 @@
 }
 
 .grid__item h2,.grid__item h3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: 1.5rem;
   line-height: 1.4;
 }
@@ -104,7 +104,6 @@
 	justify-content: space-between;
 }
 
-.module.grid .grid__item h2,
 .module.grid .grid__item h3,
 .module.grid .grid__item p:nth-child(1) {
 	flex-grow: 1;
